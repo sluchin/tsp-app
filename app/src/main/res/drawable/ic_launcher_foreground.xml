@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- アイコンの前景: 5 つの都市を, 1 周する道 (出発点は, 橙) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineJoin="round"
+        android:pathData="M38,40L62,34L74,54L60,74L36,66Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M62,34m-5,0a5,5 0 1,0 10,0a5,5 0 1,0 -10,0M74,54m-5,0a5,5 0 1,0 10,0a5,5 0 1,0 -10,0M60,74m-5,0a5,5 0 1,0 10,0a5,5 0 1,0 -10,0M36,66m-5,0a5,5 0 1,0 10,0a5,5 0 1,0 -10,0" />
+    <path
+        android:fillColor="#FFF4A261"
+        android:pathData="M38,40m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0" />
+</vector>

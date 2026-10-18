@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">巡回セールスマン</string>
+    <string name="title">巡回セールスマン問題</string>
+    <string name="hint">盤をタップして都市を置き、「解く」を押します。</string>
+    <string name="method_nearest">最近傍</string>
+    <string name="method_two_opt">2-opt</string>
+    <string name="method_exact">厳密解</string>
+    <string name="random">ランダム</string>
+    <string name="clear">消去</string>
+    <string name="solve">解く</string>
+    <string name="count">ランダムの都市の数: %1$d</string>
+    <plurals name="points">
+        <item quantity="other">%1$d 都市</item>
+    </plurals>
+    <string name="result">長さ %1$s · %2$s · %3$s</string>
+    <plurals name="milliseconds">
+        <item quantity="other">%1$d ミリ秒</item>
+    </plurals>
+    <string name="too_few">都市を 2 つ以上置いてください。</string>
+    <plurals name="too_many_exact">
+        <item quantity="other">厳密解は %1$d 都市までです。最近傍か 2-opt を使ってください。</item>
+    </plurals>
+</resources>

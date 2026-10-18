@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TSP</string>
+    <string name="title">Traveling salesman</string>
+    <string name="hint">Tap the board to place the cities, then tap Solve.</string>
+    <string name="method_nearest">Nearest</string>
+    <string name="method_two_opt">2-opt</string>
+    <string name="method_exact">Exact</string>
+    <string name="random">Random</string>
+    <string name="clear">Clear</string>
+    <string name="solve">Solve</string>
+    <string name="count">Random cities: %1$d</string>
+    <plurals name="points">
+        <item quantity="one">%1$d city</item>
+        <item quantity="other">%1$d cities</item>
+    </plurals>
+    <string name="result">Length %1$s · %2$s · %3$s</string>
+    <plurals name="milliseconds">
+        <item quantity="one">%1$d ms</item>
+        <item quantity="other">%1$d ms</item>
+    </plurals>
+    <string name="too_few">Place at least 2 cities.</string>
+    <plurals name="too_many_exact">
+        <item quantity="one">The exact solution works up to %1$d city. Use Nearest or 2-opt.</item>
+        <item quantity="other">The exact solution works up to %1$d cities. Use Nearest or 2-opt.</item>
+    </plurals>
+</resources>

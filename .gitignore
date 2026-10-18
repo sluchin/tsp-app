@@ -1,0 +1,45 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+.kotlin/
+
+# Gradle のラッパーの jar は, コミットする (上の *.jar の例外)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle の生成物と, 個人の設定
+.gradle/
+build/
+local.properties
+
+# Android Studio など, エディタの設定
+.idea/
+*.iml
+.vscode/
+
+# 署名の鍵 (リリース用の鍵を, コミットしない)
+*.jks
+*.keystore
+
