@@ -48,6 +48,11 @@ android {
     }
 }
 
+// APK の名前を, リポジトリの名前と版にする (例: tsp-app-0.1.0-debug.apk. 後ろに, ビルドの種類が付く)
+base {
+    archivesName = "tsp-app-${android.defaultConfig.versionName}"
+}
+
 dependencies {
     implementation(project(":core"))
     implementation(libs.androidx.core)
