@@ -26,7 +26,7 @@ n は都市の数です。厳密解は、都市が 12 より多いと、使え�
 
 ## 開発
 
-Android Studio は使いません。ビルド、テスト、整形、静的解析、ドキュメントの生成は全てコマンドラインで、Docker の中で実行します。手順は [SETUP.md](docs/setup.md) です。作りは [gaia-neko](https://github.com/sluchin/gaia-neko) と同じです。
+Android Studio は使いません。ビルド、テスト、整形、静的解析、ドキュメントの生成は全てコマンドラインで、Docker の中で実行します。手順は [SETUP.md](docs/setup.md) です。作りは [gaia-neko](https://github.com/sluchin/gaia-neko) と同じです。今後の予定は [TODO.md](TODO.md) にあります。
 
 ## ライセンス
 
