@@ -1,6 +1,6 @@
 # 環境構築
 
-tsp-app の、ビルドとテストの手順です。作りは [tsp-app](https://github.com/sluchin/tsp-app) の `SETUP.md` と同じです (Docker のイメージ、Gradle、CI)。
+tsp-app の、ビルドとテストの手順です。作りは [tsp-app](https://github.com/sluchin/tsp-app) の `docs/setup.md` と同じです (Docker のイメージ、Gradle、CI)。
 
 ## 1. 必要なもの
 
