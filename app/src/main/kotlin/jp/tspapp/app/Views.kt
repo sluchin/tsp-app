@@ -23,7 +23,7 @@ private const val CARD_PADDING_DP = 16
  *
  * @receiver コンテキスト
  * @param appearance 文字の見た目 (`TextAppearance.Material3.*` のスタイル)
- * @param colorAttr 文字の色の属性 (なければ, テーマの既定の色)
+ * @param colorAttr 文字の色の属性 (なければテーマの既定の色)
  * @return 文字の部品
  */
 fun Context.styledText(
@@ -53,7 +53,7 @@ fun Context.cardText(): TextView =
     }
 
 /**
- * 文字を表示する (空なら, 隠す).
+ * 文字を表示する (空なら隠す).
  *
  * @receiver 文字の部品
  * @param text 文字
@@ -98,7 +98,7 @@ fun Context.busyIndicator(): LinearProgressIndicator =
     }
 
 /**
- * 縦に並べる部品を, 上に余白を空けて, 足す.
+ * 縦に並べる部品を, 上に余白を空けて足す.
  *
  * @receiver 縦に並べる部品
  * @param view 足す部品

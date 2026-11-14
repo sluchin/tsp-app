@@ -39,7 +39,7 @@ private const val RANDOM_MIN = 4
 /** でたらめな都市の数の, 上限. */
 private const val RANDOM_MAX = 60
 
-/** でたらめな都市の数の, 最初の値 (厳密解で, 解ける数). */
+/** でたらめな都市の数の, 最初の値 (厳密解で解ける数). */
 private const val RANDOM_DEFAULT = EXACT_MAX_POINTS
 
 /** でたらめな都市を, 盤の端から離す距離 (dp. 点が, 盤からはみ出さないように). */
@@ -54,7 +54,7 @@ private const val TAG = "Solver"
 /**
  * 巡回セールスマン問題の画面.
  *
- * 盤 ([TourView]) をタップして, 都市を置く. 「ランダム」で, でたらめな都市を置き直す. 解き方
+ * 盤 ([TourView]) をタップして都市を置く. 「ランダム」で, でたらめな都市を置き直す. 解き方
  * (最近傍, 2-opt, 厳密解) を選んで「解く」を押すと, 裏のスレッドで解いて, 巡回路を描き, 長さと時間を表示する.
  */
 class MainActivity : AppCompatActivity() {
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * 都市の位置を, 保存する (回転などで, 画面を作り直すとき).
+     * 都市の位置を, 保存する (回転などで画面を作り直すとき).
      *
      * @param outState 保存する状態
      */
@@ -254,18 +254,18 @@ class MainActivity : AppCompatActivity() {
         showPoints()
     }
 
-    /** 都市を描き直して, 巡回路と結果を消す (解いている処理も, 止める). */
+    /** 都市を描き直して, 巡回路と結果を消す (解いている処理も止める). */
     private fun showPoints() {
         job?.cancel()
         busy.isVisible = false
         board.points = points.toList()
         board.order = emptyList()
         count.text = resources.getQuantityString(R.plurals.points, points.size, points.size)
-        // 結果の欄は, 隠さずに, 案内を出す (隠すと, 盤の高さが変わって, 置いた都市が, 盤からはみ出す)
+        // 結果の欄は隠さずに案内を出す (隠すと盤の高さが変わって, 置いた都市が盤からはみ出す)
         result.showOrHide(getString(R.string.hint))
     }
 
-    /** 選んだ解き方で, 裏のスレッドで解いて, 巡回路と, 長さと, かかった時間を表示する. */
+    /** 選んだ解き方により裏のスレッドで解いて, 巡回路, 長さ, かかった時間を表示する. */
     private fun solveTour() {
         val method = methods.getValue(group.checkedButtonId)
         when {

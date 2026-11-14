@@ -12,7 +12,7 @@ import kotlin.random.Random
 /** 厳密解 ([Method.EXACT]) で解ける, 点の数の上限 (計算の量は, 点の数 n に対して, n² × 2ⁿ). */
 const val EXACT_MAX_POINTS = 12
 
-/** この数以下の点は, どの順でも, 巡回路の長さが同じ (厳密解で, そのまま返す). */
+/** この数以下の点は, どの順でも, 巡回路の長さが同じ (厳密解でそのまま返す). */
 private const val TRIVIAL_POINTS = 3
 
 /** 2-opt で, 短くなったとみなす, 差の下限 (浮動小数点の誤差で, 入れ替えを繰り返さないため). */
@@ -32,7 +32,7 @@ data class Point(
 /**
  * 巡回路 (全ての点を 1 回ずつ訪れて, 最初の点に戻る道).
  *
- * @property order 訪れる順の, 点の番号 (最後の点から, 最初の点に戻る)
+ * @property order 訪れる順の, 点の番号 (最後の点から最初の点に戻る)
  * @property length 長さ (最初の点に戻る分を含む)
  */
 data class Tour(
@@ -48,7 +48,7 @@ enum class Method {
     /** 最近傍法の道を, 2-opt (交差する 2 本の辺を, つなぎ替える) で, 短くできなくなるまで改善する. */
     TWO_OPT,
 
-    /** 動的計画法 (Held-Karp) で, 最短の巡回路を求める. [EXACT_MAX_POINTS] 点まで. */
+    /** 動的計画法 (Held-Karp) で最短の巡回路を求める. [EXACT_MAX_POINTS] 点まで. */
     EXACT,
 }
 
@@ -103,10 +103,10 @@ fun solve(
 }
 
 /**
- * 最近傍法で, 巡回路を作る (0 番の点から, 最も近い, まだ訪れていない点へ, 順に進む).
+ * 最近傍法で巡回路を作る (0 番の点から, まだ訪れていない最も近い点へ順に進む).
  *
  * @param points 点
- * @return 訪れる順の, 点の番号 (点がなければ, 空)
+ * @return 訪れる順の, 点の番号 (点がなければ空)
  */
 fun nearestNeighbor(points: List<Point>): List<Int> {
     if (points.isEmpty()) {
@@ -125,8 +125,8 @@ fun nearestNeighbor(points: List<Point>): List<Int> {
 }
 
 /**
- * 2-opt で, 巡回路を短くする (2 本の辺 a-b と c-d を, a-c と b-d につなぎ替えて, 短くなれば, そうする.
- * 短くできなくなるまで, 繰り返す). 最初の点は, 変えない.
+ * 2-opt で, 巡回路を短くする (2 本の辺 a-b と c-d を, a-c と b-d につなぎ替えて, 短くなればそうする.
+ * 短くできなくなるまで繰り返す). 最初の点は, 変えない.
  *
  * @param points 点
  * @param tour 元の巡回路 (訪れる順の, 点の番号)
@@ -174,7 +174,7 @@ private fun improveOnce(
 }
 
 /**
- * 動的計画法 (Held-Karp) で, 最短の巡回路を求める.
+ * 動的計画法 (Held-Karp) で最短の巡回路を求める.
  *
  * 「0 番の点から出て, 集合 S の点を全て訪れて, 点 j で終わる道」の最短の長さを, S の小さい順に求めて,
  * 最後に 0 番の点に戻る. 計算の量は, 点の数 n に対して, n² × 2ⁿ.

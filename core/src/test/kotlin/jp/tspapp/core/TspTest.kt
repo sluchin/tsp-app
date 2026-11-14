@@ -56,7 +56,7 @@ class TspTest {
         assertEquals(0.0, tourLength(emptyList(), emptyList()))
     }
 
-    /** 最近傍法は, 0 番から, 最も近い点へ進む. 点がなければ, 空. */
+    /** 最近傍法は, 0 番から最も近い点へ進む. 点がなければ空. */
     @Test
     fun nearestNeighborGoesToTheNearestPoint() {
         val points = listOf(Point(0.0, 0.0), Point(10.0, 0.0), Point(1.0, 0.0), Point(2.0, 0.0))
@@ -76,7 +76,7 @@ class TspTest {
         assertEquals(4.0, tourLength(square, order), 1e-9)
     }
 
-    /** 2-opt は, 短くならなければ, 変えない. 点が 3 つ以下でも, 動く. */
+    /** 2-opt は, 短くならなければ変えない. 点が 3 つ以下でも動く. */
     @Test
     fun twoOptKeepsTheShortTour() {
         assertEquals(listOf(0, 2, 1, 3), twoOpt(square, listOf(0, 2, 1, 3)))
@@ -97,7 +97,7 @@ class TspTest {
         }
     }
 
-    /** 厳密解は, 3 点以下なら, そのままの順. */
+    /** 厳密解は, 3 点以下ならそのままの順. */
     @Test
     fun exactOfFewPoints() {
         assertEquals(emptyList(), exact(emptyList()))
@@ -139,7 +139,7 @@ class TspTest {
         assertEquals(3, randomPoints(3, 1.0, 1.0).size)
     }
 
-    /** データクラスの, 文字列, 複製, 分解が, 使える. */
+    /** データクラスの文字列, 複製, 分解が使える. */
     @Test
     fun dataClassFeatures() {
         val point = Point(1.0, 2.0)
